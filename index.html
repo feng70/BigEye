@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>卡姿兰大眼可视化项目</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+    .t_title {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 2.5em;
+        line-height: 80px;
+        color: #fff;
+    }
+
+    #chart_map {
+        cursor: pointer;
+    }
+
+    .t_show {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 2px;
+        background: #2C58A6;
+        padding: 2px 5px;
+        color: #fff;
+        cursor: pointer;
+    }
+    </style>
+
+</head>
+
+<body>
+    <!--header-->
+    <div class="header">
+        <div class="bg_header">
+            <div class="header_nav fl t_title">
+                    <img src="images/logo.png" alt="logo" width="60" height="60">
+                    卡姿兰大眼可视化项目
+            </div>
+        </div>
+    </div>
+
+    <!--main-->
+    <div class="data_content">
+        <div>
+            
+<a href="开场.html"><button style="background-color: #EE5C42;width: 76px;height: 36px;color: #FFFFFF" onclick="earth()">地球</button>
+</a>
+            <p style="background-color:yellow;font-size:20px;">项目成员：刘云霞；冯启林；张小菲 </p>           
+            <button type="button" style="background-color: #EE5C42;width: 76px;height: 36px;color: #EECFA1" onclick="alert('冯启林：网页搭建,数据清洗，数据图表可视化设计,网页设计，网页功能设计;'+ '\n' +  '刘云霞：网页搭建,数据清洗，数据图表可视化设计,网页设计，网页功能设计;'+ '\n' +'张小菲：数据清洗，数据图表可视化设计,网页设计，网页功能设计;')">详细分工</button>  
+            <button style="background-color: #EE5C42;width: 76px;height: 36px;color: #FFFFFF" onclick="echart_2();echart_3()">人口分析</button>   
+            <button style="background-color: #EE5C42;width: 76px;height: 36px;color: #FFFFFF" onclick=" echart_1(); echart_4();echart_5(); echart_6()">网吧分析</button>
+            <button type="button" style="background-color: #EE5C42;width: 76px;height: 36px;color: #EECFA1" onclick="alert('1.网吧评分'+'\n'+'2.交互性强'+'\n'+'3.界面设计美观'+'\n'+'4.细节处理到位'+'\n'+'5.数据海量，全部包含，自己体系给予综合测评'+'\n'+'6.'+'\n'+'7.'+'\n'+'....')">我们的亮点</button>  
+            <p></p>
+        </div>
+
+        <div class="data_main">
+        	<!-- 左侧部分 -->
+            <div class="main_left fl">
+                <div class="left_1 t_btn6" style="cursor: pointer;">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        <img src="images/t_1.png" alt="">&nbsp;网吧评分
+                    </div>
+                    <div id="sizeDetails" class="echart t_btn7" style="width:100%;height: 280px;"></div>
+                </div>
+                <div class="left_2" style="cursor: pointer;">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        <img src="images/t_2.png" alt="">&nbsp;人员年龄统计
+                    </div>
+                    <div id="chart_2" class="chart t_btn9" style="width:100%;height:320px;"></div>
+                </div>
+            </div>
+
+            <!-- 中间部分 -->
+            <div class="main_center fl">
+                <div class="center_text">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        <img src="images/t_3.png" alt="">&nbsp;地图
+                    </div>
+
+                    <div class="data_time">  
+                      <button style="background-color: #7ED321;width: 76px;height: 36px;color: #FFFFFF" onclick="echart_mapb()">分析</button>   
+                      <button style="background-color: #7ED321;width: 76px;height: 36px;color: #FFFFFF" onclick="echart_map()">重庆地图</button>
+                      <button style="background-color: #7ED321;width: 76px;height: 36px;color: #FFFFFF" onclick="echart_mapa()">中国地图</button>
+                    </div>
+
+                    <div id="chart_map" style="width:100%;height:580px;">
+
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧部分 -->
+            <div class="main_right fr">
+                <div class="right_1">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+
+                    <div class="main_title">
+                    </div>
+
+                    <div class="data_time">
+                            <img src="images/t_4.png" alt="">&nbsp; 外来人口省份
+                        </div> 
+
+                    <div id="chart_3" class="echart t_btn7" style="width:100%;height: 250px;"></div>
+                </div>
+                <div class="right_2">
+                    <!--左上边框-->
+                    <div class="t_line_box">
+                        <i class="t_l_line"></i>
+                        <i class="l_t_line"></i>
+                    </div>
+                    <!--右上边框-->
+                    <div class="t_line_box">
+                        <i class="t_r_line"></i>
+                        <i class="r_t_line"></i>
+                    </div>
+                    <!--左下边框-->
+                    <div class="t_line_box">
+                        <i class="l_b_line"></i>
+                        <i class="b_l_line"></i>
+                    </div>
+                    <!--右下边框-->
+                    <div class="t_line_box">
+                        <i class="r_b_line"></i>
+                        <i class="b_r_line"></i>
+                    </div>
+                    <div class="main_title">
+                        
+                    </div>
+                    <div class="data_time"> 
+                            <img src="images/t_7.png" alt="">&nbsp;上网时间分布 <br/>
+                        <button style="background-color: #7ED321;width: 76px;height: 36px;color: #FFFFFF" onclick="echart_4()">市区统计</button>   
+                        <button style="background-color: #7ED321;width: 76px;height: 36px;color: #FFFFFF" onclick="echart_5()">郊区统计</button>
+                        <button style="background-color: #7ED321;width: 76px;height: 36px;color: #FFFFFF" onclick="echart_6()">市郊对比</button>
+                      
+                    </div>
+  
+
+
+                    <div id="chart_4" class="echart fl t_btn4" style="width:100%;height: 250px;cursor: pointer;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-2.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/dataTool.js"></script>
+<script src="js/index.js"></script>
+<script src="js/chongqing.js"></script>
+<script src="js/ColdCar.js"></script>
+<script src="js/china.js"></script>
+
+</html>
